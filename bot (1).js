@@ -220,7 +220,6 @@ client.on('message', message => {
   ** -cv <name> | انشاء رووم فويس**:crown:
   ** -delet <name> | مسح الشات او الرووم فويس**
   ** -ccolors <number> | ينشا لك الوان مع كم الوان تبي**
-  ** -credit |يوريك كم الكريديت حقتك** 
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 `)
      message.author.sendEmbed(embed)
@@ -317,7 +316,7 @@ client.on('message', message => {
   ** -emoji <any things> | لتحويل اي كلمه تقولها الي ايموجي**:small_orange_diamond: 
   ** -inv | لدعوة البوت الى سيرفرك**:black_circle: 
   ** -support | سيرفر الدعم**:wrench:  :envelope_with_arrow: 
-  
+  ** -credit |يوريك كم الكريديت حقتك
   ** -contact | ارسال اقتراح او لمراسلة صاحب البوت**
   
 **  ======:blossom:نــتــمــنــآ لــكــم آســتــمـــتــآع :blossom:======  **`)
@@ -2419,14 +2418,8 @@ client.on('message', message => {
 }
 });
 
- //credit
-                        ctx.font = "bold 12px kathen" // نوع الخط وحجمه
-                        ctx.fontSize = '10px'; // عرض الخط
-                        ctx.fillStyle = "#f1f1f1" // لون الخط
-                        ctx.textAlign = "center"; // محاذا ة النص
-                        ctx.fillText(`$${profile[getvalueof.id].credits}`, 81, 159) // احداثيات المصاري
- }
-});
+
+ 
  
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
@@ -2910,6 +2903,14 @@ const channel = sWlc[message.guild.id].channel
 });
  
 
+client.on('message', message => {
+	var prefix = "-";
+    ctx.font = "bold 12px kathen" 
+    ctx.fontSize = '10px'; 
+    ctx.fillStyle = "#f1f1f1" 
+    ctx.textAlign = "center"; 
+    ctx.fillText(`$${profile[getvalueof.id].credits}`, 81, 159) 
+ 
 
 client.on("guildMemberAdd", member => {
       if(!sWlc[member.guild.id]) sWlc[member.guild.id] = {
@@ -3120,6 +3121,7 @@ channel.guild.owner.send(`<@!${channelremover.id}>
  channelr[channelremover.id].deleted = 0;
   },Otime)
   });
+
 
   client.on('message', message => { 
 	var prefix ="-";
