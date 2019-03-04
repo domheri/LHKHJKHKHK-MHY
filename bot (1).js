@@ -220,6 +220,7 @@ client.on('message', message => {
   ** -cv <name> | انشاء رووم فويس**:crown:
   ** -delet <name> | مسح الشات او الرووم فويس**
   ** -ccolors <number> | ينشا لك الوان مع كم الوان تبي**
+  ** -credit |يوريك كم الكريديت حقتك** 
   -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 `)
      message.author.sendEmbed(embed)
@@ -2418,8 +2419,14 @@ client.on('message', message => {
 }
 });
 
-
- 
+ //credit
+                        ctx.font = "bold 12px kathen" // نوع الخط وحجمه
+                        ctx.fontSize = '10px'; // عرض الخط
+                        ctx.fillStyle = "#f1f1f1" // لون الخط
+                        ctx.textAlign = "center"; // محاذا ة النص
+                        ctx.fillText(`$${profile[getvalueof.id].credits}`, 81, 159) // احداثيات المصاري
+ }
+});
  
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
